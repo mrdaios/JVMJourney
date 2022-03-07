@@ -12,13 +12,8 @@ import org.mrdaios.ijvm.lang.opcode.JvmOpcodeInvoker;
  */
 public class JvmStackFrame {
 
-    /**
-     * 程序计数器
-     */
-    private final int pc = 0;
     private final JvmClass clazz;
     private final JvmMethod method;
-
     /**
      * 局部变量表(Local Variables)
      * 用于存储方法的局部变量表
@@ -39,6 +34,10 @@ public class JvmStackFrame {
     private final ConstantPool constantPool;
     private final boolean isReturned = false;
     /**
+     * 程序计数器
+     */
+    private int pc = 0;
+    /**
      * 返回值
      */
     private Object returnVal;
@@ -54,6 +53,14 @@ public class JvmStackFrame {
         this.opcodes = opcodes;
         this.localVariables = new Slots<>(variables);
         this.operandStack = new SlotsStack<>(stackSize);
+    }
+
+    public int increasePc() {
+        return pc++;
+    }
+
+    public int getPc() {
+        return pc;
     }
 
     public Slots<Object> getLocalVariables() {
@@ -74,5 +81,9 @@ public class JvmStackFrame {
 
     public Object getReturn() {
         return returnVal;
+    }
+
+    public JvmOpcodeInvoker[] getOpcodes() {
+        return opcodes;
     }
 }

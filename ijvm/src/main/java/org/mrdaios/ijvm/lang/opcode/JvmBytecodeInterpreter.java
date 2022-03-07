@@ -1,8 +1,12 @@
 package org.mrdaios.ijvm.lang.opcode;
 
+import com.sun.org.apache.bcel.internal.Constants;
 import org.mrdaios.ijvm.runtime.Environment;
 import org.mrdaios.ijvm.runtime.JvmStack;
 import org.mrdaios.ijvm.runtime.JvmStackFrame;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class JvmBytecodeInterpreter {
 
@@ -25,6 +29,18 @@ public class JvmBytecodeInterpreter {
                 }
                 continue;
             }
+            JvmOpcodeInvoker[] opcodes = stackFrame.getOpcodes();
+            int pc = stackFrame.increasePc();
+            opcodes[pc].invoke(environment, stackFrame);
+        }
+    }
+
+    public static JvmOpcodeInvoker[] parseCode(byte[] codes) {
+        List<JvmOpcodeInvoker> opcodes = new ArrayList<>();
+        for (int i = 0; i < codes.length; i++) {
+            short code = codes[i];
+            JvmOpcodeRout opcodeRout = JvmOpcodeRout.valueOf(code);
+            short noOfOperand = Constants.NO_OF_OPERANDS[code];
 
         }
 
