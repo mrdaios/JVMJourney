@@ -3,6 +3,7 @@ package org.mrdaios.ijvm.lang.opcode;
 public enum JvmOpcodeRout {
 
     ALOAD_0,
+    ALOAD_1,
     NEW;
 
     public static JvmOpcodeRout valueOf(short code) {
