@@ -5,6 +5,7 @@ public enum JvmOpcodeRout {
     ALOAD_0,
     ALOAD_1,
     ALOAD_2,
+    ALOAD_3,
     NEW;
 
     public static JvmOpcodeRout valueOf(short code) {
