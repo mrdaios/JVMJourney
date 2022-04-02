@@ -7,6 +7,11 @@ public enum JvmOpcodeRout {
     ALOAD_2,
     ALOAD_3,
     RETURN,
+    GETSTATIC,
+    /**
+     * 调用超类构造方法
+     */
+    INVOKESPECIAL,
     NEW;
 
     public static JvmOpcodeRout valueOf(short code) {
