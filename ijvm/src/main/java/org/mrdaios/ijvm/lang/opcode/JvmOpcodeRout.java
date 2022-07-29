@@ -6,6 +6,7 @@ public enum JvmOpcodeRout {
     ALOAD_1,
     ALOAD_2,
     ALOAD_3,
+    ALOAD_4,// TODO:
     RETURN,
     GETSTATIC,
     /**
