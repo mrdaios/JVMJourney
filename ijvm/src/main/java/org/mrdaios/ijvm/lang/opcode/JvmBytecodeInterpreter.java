@@ -33,6 +33,7 @@ public class JvmBytecodeInterpreter {
             int pc = stackFrame.increasePc();
             opcodes[pc].invoke(environment, stackFrame);
             StringBuilder sb = new StringBuilder();
+            sb.append("> ");
         }
     }
 
