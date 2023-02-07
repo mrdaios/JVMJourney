@@ -34,6 +34,8 @@ public class JvmBytecodeInterpreter {
             opcodes[pc].invoke(environment, stackFrame);
             StringBuilder sb = new StringBuilder();
             sb.append("> ");
+            sb.append(frame.getCurrentClass().getName());
+
         }
     }
 
