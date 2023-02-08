@@ -35,7 +35,7 @@ public class JvmBytecodeInterpreter {
             StringBuilder sb = new StringBuilder();
             sb.append("> ");
             sb.append(frame.getCurrentClass().getName());
-
+            sb.append(".");
         }
     }
 
