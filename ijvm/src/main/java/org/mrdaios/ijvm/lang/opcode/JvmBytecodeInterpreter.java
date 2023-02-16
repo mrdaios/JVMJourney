@@ -38,6 +38,7 @@ public class JvmBytecodeInterpreter {
             sb.append(".");
             sb.append(frame.getCurrentMethod().getName());
             sb.append("@");
+            sb.append(pc);
         }
     }
 
