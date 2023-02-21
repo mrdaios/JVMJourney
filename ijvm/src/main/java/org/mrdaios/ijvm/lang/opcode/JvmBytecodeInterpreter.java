@@ -40,6 +40,8 @@ public class JvmBytecodeInterpreter {
             sb.append("@");
             sb.append(pc);
             sb.append(":");
+            sb.append(codes[pc]);
+
 
         }
     }
