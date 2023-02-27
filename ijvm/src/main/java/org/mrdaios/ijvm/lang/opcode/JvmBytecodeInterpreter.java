@@ -42,6 +42,7 @@ public class JvmBytecodeInterpreter {
             sb.append(":");
             sb.append(codes[pc]);
             System.out.println(sb);
+            codes[pc].invoke(env, frame);
 
 
 
