@@ -57,6 +57,7 @@ public class JvmBytecodeInterpreter {
             short noOfOperand = Constants.NO_OF_OPERANDS[code];
             byte[] operands = Arrays.copyOfRange(codes, i + 1, i + 1 + noOfOperands);
             opcodes.add(new OpcodeInvoker() {
+                @Override
 
         }
 
