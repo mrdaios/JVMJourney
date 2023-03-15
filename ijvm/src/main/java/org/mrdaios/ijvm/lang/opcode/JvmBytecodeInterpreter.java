@@ -58,8 +58,6 @@ public class JvmBytecodeInterpreter {
             byte[] operands = Arrays.copyOfRange(codes, i + 1, i + 1 + noOfOperands);
             opcodes.add(new OpcodeInvoker() {
                 @Override
-
-        }
-
+                public void invoke(Env env, StackFrame frame) throws Exception {
     }
 }
