@@ -6,6 +6,7 @@ public class CinitMain {
     {
         a = "123";
         System.out.println("clinit");
+        System.out.println("clinit");
     }
 
     public static void main(String[] args) {
